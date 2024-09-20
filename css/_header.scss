@@ -8,6 +8,10 @@
 
   &__content {
     @include flex-betweenCenter;
+
+    &.off {
+      justify-content: center;
+    }
   }
 
   &__link {
