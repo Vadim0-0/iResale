@@ -1,0 +1,201 @@
+.header {
+  margin-bottom: 24px;
+}
+
+.header-top {
+  padding: 7px 0;
+  background-color: var(--black);
+
+  &__content {
+    @include flex-betweenCenter;
+  }
+
+  &__link {
+    @include flex-center(8px);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 138%;
+    color: var(--arrow);
+    .span {
+      color: var(--gray-3);
+      opacity: 0.99;
+    }
+  }
+
+  &__links {
+    @include flex-center;
+  }
+
+  &__social {
+    @include flex-center(12px);
+    margin-right: 24px;
+  }
+
+  &__tel {
+    margin-right: 32px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 123%;
+    color: var(--white);
+  }
+
+  &__btn {
+    padding: 4px 12px;
+    border: none;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 138%;
+    color: var(--white);
+    background-color: var(--black-2);
+    opacity: 0.55;
+  }
+}
+
+.header-bottom {
+  padding: 18px 0;
+  background-color: var(--white);
+
+  &__content {
+    @include flex-betweenCenter;
+  }
+
+  &__nav {
+    @include flex-center;
+  }
+
+  &__logo {
+    margin-right: 32px
+  }
+
+  &__btn {
+    margin-right: 24px;
+
+    svg  {
+      stroke: var(--white);
+      @include transition;
+    }
+    &:hover svg {
+      stroke: var(--green);
+    }
+  }
+
+  &__links {
+    @include flex-center(21px);
+
+    a {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 133%;
+      color: var(--black);
+    }
+  }
+
+  &__social {
+    @include flex-center(18px);
+
+    a {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 133%;
+      color: var(--black);
+    }
+  }
+}
+
+.header-mobile {
+  display: none;
+}
+
+
+@media (max-width: 1100px) {
+  .header-bottom {
+
+    &__content {
+      margin-bottom: 70px;
+    }
+
+    &__nav {
+      position: relative;
+    }
+
+    &__btn {
+      margin-right: 0;
+    }
+
+    &__links {
+      position: absolute;
+      top: 78px;
+      left: 0;
+
+      & a {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-top {
+
+    &__links {
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    &__tel {
+      margin-right: 0;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 33px;
+      right: 0;
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+
+  .header {
+
+    &-top {
+      display: none;
+    }
+
+    &-bottom {
+      display: none;
+    }
+
+    &-mobile {
+      display: block;
+      padding: 15px 0;
+      background-color: var(--white);
+
+      &__content {
+        @include flex-betweenCenter;
+      }
+
+      &__btn {
+        @include flex-center;
+        padding: 6px 3px;
+      }
+
+      &__logo {
+        width: 130px;
+        height: 30px
+      }
+
+      &__social {
+        @include flex-center(10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    margin-bottom: 17px;
+  }
+}
+
