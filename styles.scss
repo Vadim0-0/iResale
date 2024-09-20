@@ -467,156 +467,6 @@
     &__container {
       padding: 24px;
     }
-
-    &__trade {
-      margin-bottom: 32px;
-
-      display: block;
-
-      &-devices {
-        &__selector {
-          @include grid-ColumnsEqually(2);
-          margin-bottom: 18px;
-
-          &-device {
-            @include flex-center;
-            flex-direction: column;
-            gap: 11px;
-
-            & svg {
-              stroke: var(--gray-3);
-              @include transition;
-            }
-
-            &__descr {
-              font-family: var(--third-family);
-              font-weight: 500;
-              font-size: 14px;
-              line-height: 157%;
-              text-align: center;
-              color: var(--gray-3);
-              @include transition;
-            }
-
-            &.active {
-              & svg {
-                stroke: var(--green);
-              }
-
-              & p {
-                color: var(--green);
-              }
-            }
-          }
-        }
-
-        &__underline {
-          position: relative;
-          display: block;
-          margin-bottom: 28px;
-          width: 100%;
-          height: 1px;
-          background-color: var(--arrow);
-
-          & .trade-moving-line {
-            position: absolute;
-            height: 100%;
-            width: 50%; /* Ширина одной секции */
-            left: 0;
-            background-color: var(--gray-3);
-            transition: 0.3s ease;
-          }
-        }
-
-        &__forms {
-          position: relative;
-
-          &-form {
-            position: absolute;
-            width: 100%;
-            opacity: 0;
-            pointer-events: none;
-            @include transition;
-
-            &.active {
-              opacity: 1;
-              pointer-events: all;
-            }
-
-            &__selects {
-              @include flex-center(16px);
-              flex-direction: column;
-              margin-bottom: 32px;
-
-              &-label {
-                position: relative;
-                width: 100%;
-
-                & select {
-                  -webkit-appearance: none;
-                  -moz-appearance: none;
-                  width: 100%;
-                  padding: 13px 17px;
-                  border-radius: 8px;
-                  border: 1px solid var(--arrow);
-
-                  &::placeholder {
-                    font-family: var(--second-family);
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 143%;
-                    color: var(--black);
-                  }
-                }
-
-                &::before {
-                  content: '';
-                  position: absolute;
-                  width: 16px;
-                  height: 16px;
-                  top: 50%;
-                  right: 17px;
-                  transform: translateY(-50%);
-                  background-image: url(./img/installmentPlan/arrow.svg);
-                }
-              }
-            }
-
-            &__benefit {
-              @include flex-betweenCenter;
-              margin-bottom: 24px;
-              padding: 24px 17px;
-              border-radius: 8px;
-              border: 1px solid rgba(70, 166, 66, 0.4);
-              background-color: rgba(60, 153, 57, 0.08);
-
-              &-descr {
-                font-family: var(--second-family);
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 125%;
-                color: var(--black);
-              }
-            }
-
-            &__descr {
-              margin-bottom: 24px;
-              font-family: var(--font-family);
-              font-weight: 400;
-              font-size: 12px;
-              line-height: 133%;
-              color: var(--gray-2);
-            }
-
-            &__btn {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-
-
   }
 
   .howWorks {
@@ -624,6 +474,19 @@
       @include grid-ColumnsEqually(1, 16px)
     }
   }
+
+  .questions {
+    &__content-faq__item {
+
+      &.active {
+        height: 190px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 540px) {
 
   .questions {
     &__content-faq__item {
@@ -639,7 +502,7 @@
 
 @media (max-width: 450px) {
   .main-header {
-    margin-bottom: 51px;
+    margin-bottom: 31px;
 
     &__nav {
       margin-bottom: 21px;
@@ -652,10 +515,10 @@
 
   .installmentPlan-hero {
 
-    padding-bottom: 27px;
+    padding-bottom: 82px;
 
     &__container {
-      padding: 28px 24px;
+      padding: 31px 24px;
     }
 
     &__trade .installmentPlan-hero__descr {
