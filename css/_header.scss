@@ -57,6 +57,10 @@
 
   &__content {
     @include flex-betweenCenter;
+
+    &.off {
+      justify-content: center
+    }
   }
 
   &__nav {
@@ -112,6 +116,11 @@
 
     &__content {
       margin-bottom: 70px;
+
+      &.off {
+        justify-content: center;
+        margin-bottom: 0;
+      }
     }
 
     &__nav {
@@ -140,6 +149,10 @@
     &__links {
       position: relative;
       margin-bottom: 50px;
+
+      &.off {
+        margin-bottom: 0;
+      }
     }
 
     &__tel {
@@ -174,6 +187,10 @@
 
       &__content {
         @include flex-betweenCenter;
+
+        &.off {
+          justify-content: center
+        }
       }
 
       &__btn {
