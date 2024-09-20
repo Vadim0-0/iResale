@@ -1,0 +1,695 @@
+@import
+  'cssGlobal/normalize',
+  'cssGlobal/mixins',
+  'cssGlobal/variables',
+  'cssGlobal/untils',
+  'cssGlobal/reset',
+  'cssGlobal/globals';
+
+@import
+  'css/header',
+  'css/footer';
+
+
+.main-header {
+  margin-bottom: 29px;
+
+  &__nav {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+
+    &-link {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 133%;
+      color: var(--gray-2);
+    }
+
+    &-line {
+      display: block;
+      width: 10px;
+      height: 1px;
+      background-color: var(--arrow);
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+}
+
+
+.installmentPlan-hero {
+
+  padding-bottom: 52px;
+
+  &__container {
+    padding: 102px 15px;
+    border-radius: 20px;
+    background-color: var(--white);
+  }
+
+  &__descr {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 162%;
+    text-align: center;
+    color: var(--black-2);
+  }
+
+  &__img {
+    margin-bottom: 29px;
+  }
+
+  &__trade {
+    display: none;
+  }
+
+  &__content {
+    max-width: 530px;
+    margin: auto;
+
+    &-devices {
+      &__selector {
+        @include grid-ColumnsEqually(4);
+        margin-bottom: 18px;
+
+        &-device {
+          @include flex-center;
+          flex-direction: column;
+          gap: 11px;
+
+          & svg {
+            stroke: var(--gray-3);
+            @include transition;
+          }
+
+          &__descr {
+            font-family: var(--third-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 157%;
+            text-align: center;
+            color: var(--gray-3);
+            @include transition;
+          }
+
+          &.active {
+            & svg {
+              stroke: var(--green);
+            }
+
+            & p {
+              color: var(--green);
+            }
+          }
+        }
+      }
+
+      &__underline {
+        position: relative;
+        display: block;
+        margin-bottom: 28px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--arrow);
+
+        & .moving-line {
+          position: absolute;
+          height: 100%;
+          width: 25%; /* Ширина одной секции */
+          left: 0;
+          background-color: var(--gray-3);
+          transition: 0.3s ease;
+        }
+      }
+
+      &__forms {
+        position: relative;
+
+        &-form {
+          position: absolute;
+          width: 100%;
+          opacity: 0;
+          pointer-events: none;
+          @include transition;
+
+          &.active {
+            opacity: 1;
+            pointer-events: all;
+          }
+
+          &__selects {
+            @include flex-center(16px);
+            flex-direction: column;
+            margin-bottom: 32px;
+
+            &-label {
+              position: relative;
+              width: 100%;
+
+              & select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 100%;
+                padding: 13px 17px;
+                border-radius: 8px;
+                border: 1px solid var(--arrow);
+
+                &::placeholder {
+                  font-family: var(--second-family);
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 143%;
+                  color: var(--black);
+                }
+              }
+
+              &::before {
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: 50%;
+                right: 17px;
+                transform: translateY(-50%);
+                background-image: url(./img/installmentPlan/arrow.svg);
+              }
+            }
+          }
+
+          &__descr {
+            margin-bottom: 24px;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 133%;
+            color: var(--gray-2);
+          }
+
+          &__btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+
+
+  }
+}
+
+.howWorks {
+
+  padding-bottom: 52px;
+
+  &__content {
+    @include grid-ColumnsEqually(3, 16px);
+
+    &-item {
+      padding: 30px 30px;
+      border-radius: 20px;
+      background-color: var(--white);
+
+      & svg {
+        margin-bottom: 17px;
+      }
+
+      &__title {
+        margin-bottom: 8px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: var(--black-2);
+      }
+
+      &__descr {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 143%;
+        color: var(--gray-2);
+      }
+    }
+  }
+}
+
+.questions {
+
+  padding-bottom: 52px;
+
+  &__content {
+    padding: 32px 24px 24px 24px;
+    border-radius: 20px;
+    background-color: var(--white);
+
+    &-title {
+      margin-bottom: 32px;
+    }
+
+    &-faq__item {
+      height: 72px;
+      overflow: hidden;
+      @include transition;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--arrow);
+      }
+
+      &-header {
+        @include flex-betweenCenter;
+        padding: 24px 0;
+
+        &__title {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 133%;
+          color: var(--black-2);
+        }
+
+        &__arrow svg {
+          stroke: var(--gray);
+          @include transition;
+        }
+      }
+
+      &-answer {
+
+        &__descr {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 162%;
+          color: var(--gray-2);
+        }
+      }
+
+      &.active {
+        height: 114px;
+
+         svg {
+          stroke: var(--green);
+          transform: rotate(180deg);
+        }
+      }
+
+
+    }
+  }
+}
+
+
+
+
+
+.installmentPlan__pop-app {
+  position: absolute;
+  padding: 100px 16px 0 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -100;
+  pointer-events: none;
+  @include transition;
+
+  &.active {
+    opacity: 1;
+    z-index: 100;
+    pointer-events: all;
+  }
+
+  &__container {
+    position: relative;
+    margin: auto;
+    max-width: 500px;
+    padding: 61px 50px;
+    border-radius: 20px;
+    background-color: var(--white);
+  }
+
+  &__closed {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+
+  &__content {
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 125%;
+      color: #1d2023;
+    }
+
+    &-descr1 {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 129%;
+      color: var(--gray-2);
+
+      & span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 129%;
+        color: var(--black-2);
+      }
+    }
+
+    &-descr2 {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+      color: var(--black-2);
+    }
+
+    &-form {
+      @include flex-center(20px);
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      & label {
+        width: 100%;
+
+        & input {
+        padding: 13px 17px;
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid var(--gray-3);
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 137%;
+        color: var(--gray-3);
+
+        ::placeholder {
+          font-family: var(--second-family);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 137%;
+          color: var(--gray-3);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+      }
+
+      &__checkbox {
+        position: relative;
+        padding-left: 32px;
+
+        &-descr {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: var(--gray-2);
+
+          & a {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: var(--gray-2);
+            text-decoration: underline;
+          }
+        }
+
+        & input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+        }
+
+        & span {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background-image: url(./img/installmentPlan/check-off.png);
+        }
+
+        & input[type="checkbox"]:checked + .installmentPlan__pop-app__content-form__checkbox-custom {
+          background-image: url(./img/installmentPlan/check-on.png);
+        }
+      }
+
+      &__btn {
+        width: 100%;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      border: none;
+      color: var(--dark);
+      background-color: var(--background);
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .installmentPlan-hero {
+
+    &__container {
+      padding: 24px;
+    }
+
+    &__trade {
+      margin-bottom: 32px;
+
+      display: block;
+
+      &-devices {
+        &__selector {
+          @include grid-ColumnsEqually(2);
+          margin-bottom: 18px;
+
+          &-device {
+            @include flex-center;
+            flex-direction: column;
+            gap: 11px;
+
+            & svg {
+              stroke: var(--gray-3);
+              @include transition;
+            }
+
+            &__descr {
+              font-family: var(--third-family);
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 157%;
+              text-align: center;
+              color: var(--gray-3);
+              @include transition;
+            }
+
+            &.active {
+              & svg {
+                stroke: var(--green);
+              }
+
+              & p {
+                color: var(--green);
+              }
+            }
+          }
+        }
+
+        &__underline {
+          position: relative;
+          display: block;
+          margin-bottom: 28px;
+          width: 100%;
+          height: 1px;
+          background-color: var(--arrow);
+
+          & .trade-moving-line {
+            position: absolute;
+            height: 100%;
+            width: 50%; /* Ширина одной секции */
+            left: 0;
+            background-color: var(--gray-3);
+            transition: 0.3s ease;
+          }
+        }
+
+        &__forms {
+          position: relative;
+
+          &-form {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            pointer-events: none;
+            @include transition;
+
+            &.active {
+              opacity: 1;
+              pointer-events: all;
+            }
+
+            &__selects {
+              @include flex-center(16px);
+              flex-direction: column;
+              margin-bottom: 32px;
+
+              &-label {
+                position: relative;
+                width: 100%;
+
+                & select {
+                  -webkit-appearance: none;
+                  -moz-appearance: none;
+                  width: 100%;
+                  padding: 13px 17px;
+                  border-radius: 8px;
+                  border: 1px solid var(--arrow);
+
+                  &::placeholder {
+                    font-family: var(--second-family);
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 143%;
+                    color: var(--black);
+                  }
+                }
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  width: 16px;
+                  height: 16px;
+                  top: 50%;
+                  right: 17px;
+                  transform: translateY(-50%);
+                  background-image: url(./img/installmentPlan/arrow.svg);
+                }
+              }
+            }
+
+            &__benefit {
+              @include flex-betweenCenter;
+              margin-bottom: 24px;
+              padding: 24px 17px;
+              border-radius: 8px;
+              border: 1px solid rgba(70, 166, 66, 0.4);
+              background-color: rgba(60, 153, 57, 0.08);
+
+              &-descr {
+                font-family: var(--second-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 125%;
+                color: var(--black);
+              }
+            }
+
+            &__descr {
+              margin-bottom: 24px;
+              font-family: var(--font-family);
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 133%;
+              color: var(--gray-2);
+            }
+
+            &__btn {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .howWorks {
+    &__content {
+      @include grid-ColumnsEqually(1, 16px)
+    }
+  }
+
+  .questions {
+    &__content-faq__item {
+      height: 100px;
+
+      &.active {
+        height: 190px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 450px) {
+  .main-header {
+    margin-bottom: 51px;
+
+    &__nav {
+      margin-bottom: 21px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+    }
+  }
+
+  .installmentPlan-hero {
+
+    padding-bottom: 27px;
+
+    &__container {
+      padding: 28px 24px;
+    }
+
+    &__trade .installmentPlan-hero__descr {
+      margin-bottom: 52px;
+    }
+
+    &__img {
+      margin-bottom: 44px;
+    }
+  }
+
+  .howWorks {
+    padding-bottom: 28px;
+  }
+
+  .questions {
+    padding-bottom: 70px;
+
+    &__content {
+
+      &-faq__item {
+
+        height: 96px;
+
+        &.active {
+          height: 215px;
+        }
+      }
+    }
+  }
+
+  .installmentPlan__pop-app {
+    &__container {
+      padding: 50px 20px;
+    }
+  }
+}
