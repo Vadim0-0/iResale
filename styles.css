@@ -863,6 +863,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+.header-bottom__content.off {
+  justify-content: center;
+}
 .header-bottom__nav {
   display: flex;
   justify-content: center;
@@ -915,6 +918,10 @@ button {
   .header-bottom__content {
     margin-bottom: 70px;
   }
+  .header-bottom__content.off {
+    justify-content: center;
+    margin-bottom: 0;
+  }
   .header-bottom__nav {
     position: relative;
   }
@@ -934,6 +941,9 @@ button {
   .header-top__links {
     position: relative;
     margin-bottom: 50px;
+  }
+  .header-top__links.off {
+    margin-bottom: 0;
   }
   .header-top__tel {
     margin-right: 0;
@@ -960,6 +970,9 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .header-mobile__content.off {
+    justify-content: center;
   }
   .header-mobile__btn {
     display: flex;
@@ -1109,6 +1122,9 @@ button {
   .footer-content__top {
     flex-direction: column;
     gap: 20px;
+  }
+  .footer-content__top.off {
+    align-items: center;
   }
   .footer-content__nav {
     margin-right: 0;
@@ -1558,150 +1574,16 @@ button {
   .installmentPlan-hero__container {
     padding: 24px;
   }
-  .installmentPlan-hero__trade {
-    margin-bottom: 32px;
-    display: block;
-  }
-  .installmentPlan-hero__trade-devices__selector {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
-    margin-bottom: 18px;
-  }
-  .installmentPlan-hero__trade-devices__selector-device {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    flex-direction: column;
-    gap: 11px;
-  }
-  .installmentPlan-hero__trade-devices__selector-device svg {
-    stroke: var(--gray-3);
-    transition: all 0.3s ease-in-out;
-  }
-  .installmentPlan-hero__trade-devices__selector-device__descr {
-    font-family: var(--third-family);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 157%;
-    text-align: center;
-    color: var(--gray-3);
-    transition: all 0.3s ease-in-out;
-  }
-  .installmentPlan-hero__trade-devices__selector-device.active svg {
-    stroke: var(--green);
-  }
-  .installmentPlan-hero__trade-devices__selector-device.active p {
-    color: var(--green);
-  }
-  .installmentPlan-hero__trade-devices__underline {
-    position: relative;
-    display: block;
-    margin-bottom: 28px;
-    width: 100%;
-    height: 1px;
-    background-color: var(--arrow);
-  }
-  .installmentPlan-hero__trade-devices__underline .trade-moving-line {
-    position: absolute;
-    height: 100%;
-    width: 50%; /* Ширина одной секции */
-    left: 0;
-    background-color: var(--gray-3);
-    transition: 0.3s ease;
-  }
-  .installmentPlan-hero__trade-devices__forms {
-    position: relative;
-  }
-  .installmentPlan-hero__trade-devices__forms-form {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease-in-out;
-  }
-  .installmentPlan-hero__trade-devices__forms-form.active {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    flex-direction: column;
-    margin-bottom: 32px;
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects-label {
-    position: relative;
-    width: 100%;
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects-label select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 100%;
-    padding: 13px 17px;
-    border-radius: 8px;
-    border: 1px solid var(--arrow);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects-label select::-moz-placeholder {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    color: var(--black);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects-label select::placeholder {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 143%;
-    color: var(--black);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__selects-label::before {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 50%;
-    right: 17px;
-    transform: translateY(-50%);
-    background-image: url(./img/installmentPlan/arrow.svg);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__benefit {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-    padding: 24px 17px;
-    border-radius: 8px;
-    border: 1px solid rgba(70, 166, 66, 0.4);
-    background-color: rgba(60, 153, 57, 0.08);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__benefit-descr {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 125%;
-    color: var(--black);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__descr {
-    margin-bottom: 24px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 133%;
-    color: var(--gray-2);
-  }
-  .installmentPlan-hero__trade-devices__forms-form__btn {
-    width: 100%;
-  }
   .howWorks__content {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
   }
+  .questions__content-faq__item.active {
+    height: 190px;
+  }
+}
+@media (max-width: 540px) {
   .questions__content-faq__item {
     height: 100px;
   }
@@ -1711,7 +1593,7 @@ button {
 }
 @media (max-width: 450px) {
   .main-header {
-    margin-bottom: 51px;
+    margin-bottom: 31px;
   }
   .main-header__nav {
     margin-bottom: 21px;
@@ -1720,10 +1602,10 @@ button {
     margin-bottom: 24px;
   }
   .installmentPlan-hero {
-    padding-bottom: 27px;
+    padding-bottom: 82px;
   }
   .installmentPlan-hero__container {
-    padding: 28px 24px;
+    padding: 31px 24px;
   }
   .installmentPlan-hero__trade .installmentPlan-hero__descr {
     margin-bottom: 52px;
