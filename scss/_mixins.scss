@@ -1,0 +1,39 @@
+@mixin flex-center($gap: 0px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex-betweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin grid-ColumnsEqually($columns, $gap: 0px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin grid-ColumnsValue($columns, $value, $gap: 0px) {
+  display: grid;
+  grid-template-columns: repeat($columns, $value);
+  gap: $gap;
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+}
+
+@mixin transition {
+  -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition:    all 0.3s ease-in-out;
+	-o-transition:      all 0.3s ease-in-out;
+	transition:         all 0.3s ease-in-out;
+}
+
+@mixin transform-center($left: 0, $top: 0) {
+  transform: translate($left, $top);
+}
