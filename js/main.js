@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 /* Главная странциа - hero */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -393,6 +392,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+/* Главная странциа - stocks - mobile */
+
 document.addEventListener('DOMContentLoaded', function() {
   const prevBtn = document.getElementById('index-stocks__prev-btn');
   const nextBtn = document.getElementById('index-stocks__next-btn');
@@ -473,9 +474,550 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/* Каталог - верхний скролл */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollContainer = document.querySelector('.catalog-content__scroll-content');
+  const scrollContent = document.querySelector('.catalog-content__scroll-content__container');
+  const prevButton = document.querySelector('.catalog-content__scroll-btn.prev');
+  const nextButton = document.querySelector('.catalog-content__scroll-btn.next');
+  const card = document.querySelector('.catalog-content__scroll-content__link');
+  const progressBar = document.querySelector('.catalog-content__scroll-indicator__progress');
+
+  // Рассчет ширины карточки с учетом отступов
+  function getCardWidth() {
+    const cardStyles = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const cardMarginRight = parseInt(cardStyles.marginRight);
+    return cardWidth + cardMarginRight;
+  }
+
+  // Обновление прогресс-бара в зависимости от прокрутки
+  function updateProgressBar() {
+    const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const scrollLeft = scrollContainer.scrollLeft;
+
+    // Рассчет процента прокрутки
+    const scrollPercentage = (scrollLeft / maxScrollLeft) * 100;
+
+    // Устанавливаем ширину полоски в зависимости от прокрутки
+    progressBar.style.width = `${scrollPercentage}%`;
+  }
+
+  // Плавный скролл по нажатию на кнопки
+  nextButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: getCardWidth(),
+      behavior: 'smooth'
+    });
+  });
+
+  prevButton.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: -getCardWidth(),
+      behavior: 'smooth'
+    });
+  });
+
+  // Логика для свайпа
+  let startX;
+  let scrollLeft;
+
+  scrollContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].pageX;
+    scrollLeft = scrollContainer.scrollLeft;
+  });
+
+  scrollContainer.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    const moveX = touch.pageX - startX;
+
+    scrollContainer.scrollLeft = scrollLeft - moveX;
+  });
+
+  // Обновление прогресс-бара при скролле
+  scrollContainer.addEventListener('scroll', updateProgressBar);
+
+  // Инициализация полосы при загрузке
+  updateProgressBar();
 
 
+});
 
+/* Каталог - изменение цены */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const minSlider = document.getElementById('minPriceSlider');
+  const maxSlider = document.getElementById('maxPriceSlider');
+  const minPriceInput = document.getElementById('minPriceInput');
+  const maxPriceInput = document.getElementById('maxPriceInput');
+  const sliderTrack = document.querySelector('.price-slider-track');
+  const minGap = 10000; // Минимальный разрыв между значениями
+  const minPrice = 50000; // Минимальная цена
+  const maxPrice = 250000; // Максимальная цена
+
+  // Функция обновления ползунков и полей ввода
+  function updateSlider() {
+      let minValue = parseInt(minSlider.value);
+      let maxValue = parseInt(maxSlider.value);
+
+      if (maxValue - minValue <= minGap) {
+          if (this.id === "minPriceSlider") {
+              minSlider.value = maxValue - minGap;
+          } else {
+              maxSlider.value = minValue + minGap;
+          }
+      }
+
+      minPriceInput.value = minSlider.value;
+      maxPriceInput.value = maxSlider.value;
+      updateTrackFill();
+  }
+
+  // Функция обновления трека (заполненной части слайдера)
+  function updateTrackFill() {
+      const percentMin = ((minSlider.value - minPrice) / (maxPrice - minPrice)) * 100;
+      const percentMax = ((maxSlider.value - minPrice) / (maxPrice - minPrice)) * 100;
+      sliderTrack.style.left = percentMin + '%';
+      sliderTrack.style.right = (100 - percentMax) + '%';
+  }
+
+  // Функция обновления слайдера при изменении значения в поле ввода
+  function updateFromInput() {
+      let minValue = parseInt(minPriceInput.value);
+      let maxValue = parseInt(maxPriceInput.value);
+
+      // Проверка и исправление значения минимальной цены
+      if (minValue < minPrice) {
+          minValue = minPrice;
+      } else if (minValue > maxSlider.value - minGap) {
+          minValue = maxSlider.value - minGap;
+      }
+
+      // Проверка и исправление значения максимальной цены
+      if (maxValue > maxPrice) {
+          maxValue = maxPrice;
+      } else if (maxValue < minSlider.value + minGap) {
+          maxValue = minSlider.value + minGap;
+      }
+
+      // Обновляем ползунки в зависимости от новых значений
+      minSlider.value = minValue;
+      maxSlider.value = maxValue;
+
+      updateTrackFill(); // Обновляем визуальное отображение трека
+  }
+
+  // Обработка событий на ползунках
+  minSlider.addEventListener('input', updateSlider);
+  maxSlider.addEventListener('input', updateSlider);
+
+  // Обработка событий на полях ввода
+  minPriceInput.addEventListener('change', updateFromInput);
+  maxPriceInput.addEventListener('change', updateFromInput);
+
+  // Инициализация трека слайдера при загрузке
+  updateTrackFill();
+});
+
+/* Каталог - фильтр */
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Находим все нужные элементы
+  const filterBlocks = document.querySelectorAll('.catalog-content__products-bottom__filter-block');
+
+  filterBlocks.forEach(filterBlock => {
+    const topBlock = filterBlock.querySelector('.catalog-content__products-bottom__filter-block__top');
+    const checkboxGroup = filterBlock.querySelector('.catalog-content__products-bottom__filter-block__ui-checkbox-group');
+    const toggleButton = filterBlock.querySelector('.catalog-content__products-bottom__filter-block button');
+    const checkboxes = checkboxGroup.getElementsByTagName('label');
+
+    // Изначально устанавливаем высоту блока как высота topBlock
+    filterBlock.style.height = `${topBlock.offsetHeight}px`;
+
+    let isExpanded = false;
+    let isFilterActive = false;
+    let initialHeight = 0;
+
+    // Функция для вычисления высоты первых N элементов
+    function calculateHeightForFirstNItems(n) {
+      let totalHeight = 0;
+      for (let i = 0; i < n && i < checkboxes.length; i++) {
+        totalHeight += checkboxes[i].offsetHeight;
+      }
+      return totalHeight;
+    }
+
+    // Функция для переключения высоты checkboxGroup
+    function toggleCheckboxGroupHeight() {
+      if (isExpanded) {
+        // Свернуть до начальной высоты (первые 5 элементов)
+        checkboxGroup.style.height = `${initialHeight}px`;
+        toggleButton.textContent = 'Показать ещё';
+      } else {
+        // Развернуть до полной высоты всех элементов
+        checkboxGroup.style.height = 'auto';
+        toggleButton.textContent = 'Показать меньше';
+      }
+      isExpanded = !isExpanded;
+      adjustFilterBlockHeight();
+    }
+
+    // Функция для изменения высоты всего filterBlock при изменении checkboxGroup
+    function adjustFilterBlockHeight() {
+      const totalHeight = topBlock.offsetHeight + checkboxGroup.offsetHeight + toggleButton.offsetHeight;
+      filterBlock.style.height = `${totalHeight}px`;
+    }
+
+    // Изначально вычисляем высоту для первых 5 элементов и устанавливаем её
+    initialHeight = calculateHeightForFirstNItems(5);
+    checkboxGroup.style.height = `${initialHeight}px`;
+    checkboxGroup.style.overflow = 'hidden';
+
+    // Добавляем обработчик события клика на кнопку toggleButton
+    toggleButton.addEventListener('click', toggleCheckboxGroupHeight);
+
+    // Добавляем обработчик события клика на topBlock для раскрытия/скрытия блока
+    topBlock.addEventListener('click', function() {
+      if (!isFilterActive) {
+        // Если блок не активен, увеличиваем его высоту
+        adjustFilterBlockHeight();
+        filterBlock.classList.add('active');
+      } else {
+        // Если блок уже активен, сворачиваем его до высоты topBlock
+        filterBlock.style.height = `${topBlock.offsetHeight}px`;
+        filterBlock.classList.remove('active');
+      }
+      isFilterActive = !isFilterActive;
+    });
+  });
+});
+
+/* Каталог - смена расположения карточек в списке */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const change1Button = document.getElementById('change1');
+    const change2Button = document.getElementById('change2');
+    const lists = document.querySelectorAll('.catalog-content__products-bottom__cards-content__list');
+    const container = document.querySelector('.catalog-content__products-bottom__cards-content');
+
+    // Функция для обновления высоты контейнера в зависимости от блока с классом active
+    function updateContainerHeight() {
+      let activeList = null;
+
+      // Ищем элемент с классом active
+      lists.forEach(list => {
+        if (list.classList.contains('active')) {
+          activeList = list;
+        }
+      });
+
+      // Если найден элемент с классом active, изменяем высоту контейнера
+      if (activeList) {
+        container.style.height = activeList.offsetHeight + 'px';
+      } else {
+        // Если нет активного элемента, сбрасываем высоту контейнера
+        container.style.height = 'auto';
+      }
+    }
+
+    // Клик по кнопке change1
+    change1Button.addEventListener('click', () => {
+      // Убираем класс change у всех списков
+      lists.forEach(list => {
+        list.classList.remove('change');
+      });
+
+      // Переключаем классы active на кнопках
+      change1Button.classList.add('active');
+      change2Button.classList.remove('active');
+
+      // Обновляем высоту контейнера
+      updateContainerHeight();
+    });
+
+    // Клик по кнопке change2
+    change2Button.addEventListener('click', () => {
+      // Добавляем класс change всем спискам
+      lists.forEach(list => {
+        list.classList.add('change');
+      });
+
+      // Переключаем классы active на кнопках
+      change2Button.classList.add('active');
+      change1Button.classList.remove('active');
+
+      // Обновляем высоту контейнера
+      updateContainerHeight();
+    });
+
+    // Инициализируем высоту контейнера при загрузке
+    updateContainerHeight();
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const listBlocks = document.querySelectorAll(".catalog-content__products-bottom__cards-content__list");
+  const pageButtons = document.querySelectorAll(".catalog-content__products-bottom__cards-pages__number");
+  const prevButton = document.querySelector(".catalog-content__products-bottom__cards-pages__btn.prev");
+  const nextButton = document.querySelector(".catalog-content__products-bottom__cards-pages__btn.next");
+  const cardsContainer = document.querySelector(".catalog-content__products-bottom__cards-content");
+  const maxVisiblePages = 4;
+  let currentPage = 0;
+
+  // Обновляем высоту родительского контейнера
+  function updateContainerHeight() {
+    const activeList = document.querySelector(".catalog-content__products-bottom__cards-content__list.active");
+    cardsContainer.style.height = `${activeList.scrollHeight}px`;
+  }
+
+  // Обновляем видимые страницы (показываем максимум 4)
+  function updateVisiblePages() {
+    const totalPages = pageButtons.length;
+
+    // Показываем только 4 страницы
+    pageButtons.forEach((btn, index) => {
+      btn.style.display = (index >= currentPage && index < currentPage + maxVisiblePages) ? "inline-block" : "none";
+    });
+  }
+
+  // Активируем определённую страницу
+  function activatePage(pageIndex) {
+    // Убираем активный класс у всех блоков
+    listBlocks.forEach((list) => list.classList.remove("active"));
+    pageButtons.forEach((btn) => btn.classList.remove("active"));
+
+    // Добавляем активный класс для выбранного блока и кнопки
+    listBlocks[pageIndex].classList.add("active");
+    pageButtons[pageIndex].classList.add("active");
+
+    // Обновляем высоту контейнера
+    updateContainerHeight();
+
+    // Обновляем видимость страниц
+    updateVisiblePages();
+  }
+
+  // Слушатели для кнопок страниц
+  pageButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      currentPage = Math.min(index, pageButtons.length - maxVisiblePages);
+      activatePage(index);
+    });
+  });
+
+  // Слушатель для кнопки "Предыдущая"
+  prevButton.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      activatePage(currentPage);
+    }
+  });
+
+  // Слушатель для кнопки "Следующая"
+  nextButton.addEventListener("click", () => {
+    if (currentPage < pageButtons.length - 1) {
+      currentPage++;
+      activatePage(currentPage);
+    }
+  });
+
+  // Инициализация
+  activatePage(0);
+});
+
+/* Каталог - открытие фильтра в мобильной версии */
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Получаем элементы кнопок и блока
+  const filterButton = document.getElementById('catalog-products-mobile-filter');
+  const closeButton = document.getElementById('catalog-filter-closed');
+  const filterBlock = document.querySelector('.catalog-content__products-bottom__filter');
+
+  // Обработчик нажатия на кнопку "Фильтр"
+  filterButton.addEventListener('click', () => {
+    filterBlock.classList.add('active');
+  });
+
+  // Обработчик нажатия на кнопку "Закрыть"
+  closeButton.addEventListener('click', () => {
+    filterBlock.classList.remove('active');
+  });
+
+});
+
+/* Карточка товара - прибавление значения */
+
+document.addEventListener("DOMContentLoaded", function () {
+  let valueElement = document.getElementById('value');
+  let currentValue = 1;
+
+  document.getElementById('increase').addEventListener('click', () => {
+      currentValue++;
+      valueElement.innerText = currentValue;
+  });
+
+  document.getElementById('decrease').addEventListener('click', () => {
+      currentValue--;
+      valueElement.innerText = currentValue;
+  });
+
+});
+
+/* Карточка товара - скролл изображений и перенос изображений для просмотра */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const scrollContainer = document.querySelector('.productCard-hero__content-images__container-scroll');
+  const imageButtons = document.querySelectorAll('.productCard-hero__content-images__container-scroll button');
+  const mainImageContainer = document.querySelector('.productCard-hero__content-images__img-container img');
+
+  let scrollAmount = 0;
+  const scrollStep = 100; // количество пикселей для скролла
+
+  // Установка первого изображения как активного при загрузке страницы
+  const firstImageSrc = imageButtons[0].querySelector('img').src;
+  mainImageContainer.src = firstImageSrc;
+  imageButtons[0].classList.add('active');
+
+  // Автоматическое определение ширины и отступа кнопок
+  function setButtonStyles() {
+    const totalButtons = imageButtons.length;
+    const containerWidth = scrollContainer.offsetWidth;
+    const buttonWidth = Math.floor(containerWidth / totalButtons) - 10; // Ширина кнопки
+    const marginRight = 10; // Отступ между кнопками
+
+    imageButtons.forEach(button => {
+      button.style.width = `${buttonWidth}px`;
+      button.style.marginRight = `${marginRight}px`;
+    });
+  }
+
+  // Вызов функции установки ширины и отступов при загрузке страницы
+  setButtonStyles();
+
+  // Функция скроллинга
+  function scrollContent(direction) {
+    if (direction === 'next') {
+      scrollAmount += scrollStep;
+    } else {
+      scrollAmount -= scrollStep;
+    }
+    scrollContainer.scroll({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+  // Привязка кнопок для скролла
+  nextButton.addEventListener('click', () => scrollContent('next'));
+  prevButton.addEventListener('click', () => scrollContent('prev'));
+
+  // Обновление главного изображения и активация кнопки
+  imageButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Убираем класс active у всех кнопок
+      imageButtons.forEach(btn => btn.classList.remove('active'));
+
+      // Устанавливаем выбранное изображение как основное
+      const newSrc = this.querySelector('img').src;
+      mainImageContainer.src = newSrc;
+
+      // Добавляем класс active к нажатой кнопке
+      this.classList.add('active');
+    });
+  });
+
+  // Функция для отслеживания свайпов
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Обработка начала свайпа
+  scrollContainer.addEventListener('touchstart', (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+  });
+
+  // Обработка окончания свайпа
+  scrollContainer.addEventListener('touchend', () => {
+    isDown = false;
+  });
+
+  // Обработка движения пальца
+  scrollContainer.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 2; // Ускорение скролла
+    scrollContainer.scrollLeft = scrollLeft - walk;
+  });
+
+  // Пересчет размеров кнопок при изменении размера окна
+  window.addEventListener('resize', setButtonStyles);
+});
+
+/* Карточка товара - изменение цвета */
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Получаем все кнопки и блоки изображений
+  const colorButtons = document.querySelectorAll('.productCard-hero__content-specifications__block-colors button');
+  const imageBlocks = document.querySelectorAll('.productCard-hero__content-images__container-scroll__block');
+
+  // Функция для удаления класса active у всех элементов
+  function removeActiveClass(elements) {
+    elements.forEach(element => {
+      element.classList.remove('active');
+    });
+  }
+
+  // Добавляем обработчики событий для каждой кнопки
+  colorButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      // Убираем класс active у всех кнопок и блоков изображений
+      removeActiveClass(colorButtons);
+      removeActiveClass(imageBlocks);
+
+      // Добавляем класс active выбранной кнопке и соответствующему блоку изображений
+      button.classList.add('active');
+      imageBlocks[index].classList.add('active');
+    });
+  });
+
+});
+
+/* Карточка товара - переключение активного окна  */
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Находим все кнопки и блоки
+  const buttons = document.querySelectorAll('.productCard-information__btns button');
+  const contentBlocks = document.querySelectorAll('.productCard-information__content-block');
+
+  // Функция для переключения классов active
+  function toggleActiveClass(targetId) {
+    // Убираем класс active у всех кнопок и блоков
+    buttons.forEach(button => button.classList.remove('active'));
+    contentBlocks.forEach(block => block.classList.remove('active'));
+
+    // Добавляем класс active выбранной кнопке
+    const activeButton = document.getElementById(targetId);
+    activeButton.classList.add('active');
+
+    // Добавляем класс active соответствующему блоку
+    const activeBlock = document.querySelector(`.productCard-information__content-block[data-target="${targetId}"]`);
+    activeBlock.classList.add('active');
+  }
+
+  // Назначаем обработчик событий для каждой кнопки
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      toggleActiveClass(button.id);
+    });
+  });
+
+});
 
 
 
@@ -539,3 +1081,68 @@ document.querySelectorAll('.questions__content-faq__item-header').forEach(header
       faqItem.classList.toggle('active');
   });
 });
+
+/* Страница расрочка - форма */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('installmentForm');
+  const nameInput = document.getElementById('installmentPlan__pop-app__name');
+  const phoneInput = document.getElementById('installmentPlan__pop-app__tel');
+  const checkbox = document.getElementById('checkbox');
+
+  // Устанавливаем +7 автоматически при фокусе на поле телефона
+  phoneInput.addEventListener('focus', function () {
+      if (!phoneInput.value) {
+          phoneInput.value = '+7';
+      }
+  });
+
+  // Блокируем ввод любых символов кроме цифр после +7
+  phoneInput.addEventListener('input', function () {
+      let numbersOnly = phoneInput.value.replace(/[^\d]/g, '');  // Удаляем все, кроме цифр
+
+      if (!numbersOnly.startsWith('7')) {
+          numbersOnly = '7' + numbersOnly.substring(1);
+      }
+
+      // Ограничиваем количество символов до 11 (1 символ 7 + 10 цифр)
+      if (numbersOnly.length > 11) {
+          numbersOnly = numbersOnly.substring(0, 11);
+      }
+
+      phoneInput.value = '+7' + numbersOnly.substring(1);  // Возвращаем значение с форматом +7
+  });
+
+  // Валидация формы перед отправкой
+  form.addEventListener('submit', function (event) {
+      let isValid = true;
+
+      // Проверка имени: поле не должно быть пустым и не должно содержать цифры
+      const nameRegex = /^[А-Яа-яЁёA-Za-z\s]+$/;  // Регулярное выражение для проверки только букв и пробелов
+      if (nameInput.value.trim() === '' || !nameRegex.test(nameInput.value)) {
+          nameInput.classList.add('error');  // Добавляем красный бордер
+          isValid = false;
+      } else {
+          nameInput.classList.remove('error');
+      }
+
+      // Проверка телефона: точно 12 символов (+7 и 10 цифр)
+      const phoneRegex = /^\+7\d{10}$/;
+      if (!phoneRegex.test(phoneInput.value)) {
+          phoneInput.classList.add('error');  // Добавляем красный бордер
+          isValid = false;
+      } else {
+          phoneInput.classList.remove('error');
+      }
+
+      // Если есть ошибки, отменяем отправку формы
+      if (!isValid) {
+          event.preventDefault();  // Отменяем отправку
+      }
+  });
+});
+
+
+
+
+
