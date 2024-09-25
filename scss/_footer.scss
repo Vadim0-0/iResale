@@ -57,6 +57,28 @@
       transform: scale(105%);
     }
   }
+
+  &.color {
+
+    .footer-link {
+      background-image: url(../img/footer/footer-bacground-white.png);
+    }
+
+    .footer-link,
+    .footer-content {
+      background-color: var(--background);
+    }
+
+    .footer-content {
+      &__connection-item__link {
+        background-color: var(--white);
+
+        &:hover {
+          background-color: var(--dark);
+        }
+      }
+    }
+  }
 }
 
 .footer-content {
@@ -77,6 +99,11 @@
     font-size: 18px;
     line-height: 122%;
     color: var(--black);
+    @include transition;
+
+    &:hover {
+      color: var(--green);
+    }
   }
 
   &__links {
@@ -100,6 +127,11 @@
       font-size: 16px;
       line-height: 125%;
       color: var(--dark);
+      @include transition;
+
+      &:hover {
+        color: var(--green);
+      }
     }
 
     &-list {
@@ -296,9 +328,17 @@
   .footer {
     padding-bottom: 15px;
 
+    &.color {
+
+      .footer-link {
+        background-image: none;
+      }
+    }
+
     &-link {
       margin-bottom: 71px;
       padding: 110px 52px 20px 20px;
+      background-image: none;
 
       & h3 {
         margin-bottom: 16px;
