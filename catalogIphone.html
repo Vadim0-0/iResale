@@ -7,8 +7,8 @@
   <title>Apple iPhone</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="catalog">
-  <header class="header-color">
+<body class="color">
+  <header class="header catalog-header">
     <div class="header-top">
       <div class="container">
         <div class="header-top__content">
@@ -69,12 +69,12 @@
         </div>
       </div>
     </div>
-    <div class="header-bottom active">
+    <div class="header-bottom color">
       <div class="container">
         <div class="header-bottom__content">
           <nav class="header-bottom__nav">
             <a href="#" class="header-bottom__logo">
-              <img src="./img/header/logo.png" alt="logo" class="header-logo">
+              <img src="./img/header/logo.svg" alt="logo" class="header-logo">
             </a>
             <a href="#" class="btn-global header-bottom__btn">
               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -821,14 +821,82 @@
         <div class="catalog-content">
           <div class="catalog-content__scroll">
             <div class="catalog-content__scroll-content">
-              <a href="#" class="catalog-content__scroll-content__link">
-                <img src="./img/catalogiphone/catalogIphone-img1png.png" alt="img">
-                <p>
-                  iPhone 15 Pro Max
-                </p>
-              </a>
+              <div class="catalog-content__scroll-content__container">
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone15ProMax-silver.svg" alt="img">
+                  <p>
+                    iPhone 15 Pro Max
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone15Pro-darck.svg" alt="img">
+                  <p>
+                    iPhone 15 Pro
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone15Plus-pink.svg" alt="img">
+                  <p>
+                    iPhone 15 Plus
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone15-blue.svg" alt="img">
+                  <p>
+                    iPhone 15
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone14ProMax-wiolet.svg" alt="img">
+                  <p>
+                    iPhone 14 Pro Max
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone14Pro-gold.svg" alt="img">
+                  <p>
+                    iPhone 14 Pro
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone14-red.svg" alt="img">
+                  <p>
+                    iPhone 14
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone13-derk.svg" alt="img">
+                  <p>
+                    iPhone 13
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone153Mini-blue.svg" alt="img">
+                  <p>
+                    iPhone 13 mini
+                  </p>
+                </a>
+                <a href="#" class="catalog-content__scroll-content__link">
+                  <img src="./img/catalogiphone/catalogiPhone-scroll/catalogIphone-scroll-iphone15ProMax-silver.svg" alt="img">
+                  <p>
+                    iPhone 15 Pro Max
+                  </p>
+                </a>
+              </div>
             </div>
-
+            <button class="catalog-content__scroll-btn prev">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 13L11 8L6 3" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="catalog-content__scroll-btn next">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 13L11 8L6 3" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="catalog-content__scroll-indicator">
+              <div class="catalog-content__scroll-indicator__progress"></div>
+            </div>
           </div>
           <div class="catalog-content__products">
             <div class="catalog-content__products-top">
@@ -839,29 +907,1683 @@
                 Фильтры
               </p>
               <div class="catalog-content__products-top__filter">
-                <label for="popularity">
+                <label for="popularity" id="sort-label">
                   <select name="" id="popularity">
                     <option value="Популярные">Популярные</option>
                   </select>
                 </label>
+                <div class="catalog-content__products-top__filter-btns">
+                 <button class="active" id="change1">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 10H19M10 1V19M5.8 1H14.2C15.8802 1 16.7202 1 17.362 1.32698C17.9265 1.6146 18.3854 2.07354 18.673 2.63803C19 3.27976 19 4.11984 19 5.8V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V5.8C1 4.11984 1 3.27976 1.32698 2.63803C1.6146 2.07354 2.07354 1.6146 2.63803 1.32698C3.27976 1 4.11984 1 5.8 1Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                 </button>
+                 <button id="change2">
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 8L7 8M19 2L7 2M19 14L7 14M3 8C3 8.55228 2.55228 9 2 9C1.44772 9 1 8.55228 1 8C1 7.44772 1.44772 7 2 7C2.55228 7 3 7.44772 3 8ZM3 2C3 2.55228 2.55228 3 2 3C1.44772 3 1 2.55228 1 2C1 1.44772 1.44772 1 2 1C2.55228 1 3 1.44772 3 2ZM3 14C3 14.5523 2.55228 15 2 15C1.44772 15 1 14.5523 1 14C1 13.4477 1.44772 13 2 13C2.55228 13 3 13.4477 3 14Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                 </button>
+                </div>
               </div>
+            </div>
+            <div class="catalog-content__products-top-mobile">
+              <!--button id="catalog-products-mobile-sort">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1667 3.33398V16.6673M14.1667 16.6673L10.8333 13.334M14.1667 16.6673L17.5 13.334M5.83333 16.6673V3.33398M5.83333 3.33398L2.5 6.66732M5.83333 3.33398L9.16667 6.66732" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Сортировать
+              </button-->
+              <label for="popularity-mobile" id="sort-label-mobile">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.1667 3.33398V16.6673M14.1667 16.6673L10.8333 13.334M14.1667 16.6673L17.5 13.334M5.83333 16.6673V3.33398M5.83333 3.33398L2.5 6.66732M5.83333 3.33398L9.16667 6.66732" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <select name="" id="popularity-mobile">
+                  <option value="Сортировать">Сортировать</option>
+                  <option value="Популярные">Популярные</option>
+                </select>
+              </label>
+              <button id="catalog-products-mobile-filter">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.16667 17.5L4.16667 12.5M4.16667 12.5C5.08714 12.5 5.83333 11.7538 5.83333 10.8333C5.83333 9.91286 5.08714 9.16667 4.16667 9.16667C3.24619 9.16667 2.5 9.91286 2.5 10.8333C2.5 11.7538 3.24619 12.5 4.16667 12.5ZM4.16667 5.83333V2.5M10 17.5V12.5M10 5.83333V2.5M10 5.83333C9.07953 5.83333 8.33333 6.57953 8.33333 7.5C8.33333 8.42047 9.07953 9.16667 10 9.16667C10.9205 9.16667 11.6667 8.42047 11.6667 7.5C11.6667 6.57953 10.9205 5.83333 10 5.83333ZM15.8333 17.5V14.1667M15.8333 14.1667C16.7538 14.1667 17.5 13.4205 17.5 12.5C17.5 11.5795 16.7538 10.8333 15.8333 10.8333C14.9129 10.8333 14.1667 11.5795 14.1667 12.5C14.1667 13.4205 14.9129 14.1667 15.8333 14.1667ZM15.8333 7.5V2.5" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Фильтр
+              </button>
             </div>
             <div class="catalog-content__products-bottom">
               <div class="catalog-content__products-bottom__filter">
+                <div class="catalog-content__products-bottom__filter-top">
+                  <h3>
+                    Фильтр
+                  </h3>
+                  <button id="catalog-filter-closed">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 7L7 17M7 7L17 17" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
                 <div class="catalog-content__products-bottom__filter-price">
                   <h4>
                     Цена, ₽
                   </h4>
                   <div class="price-slider-container">
-                      <div class="price-slider-track"></div>
-                      <input type="range" id="minSlider" class="price-slider" min="50000" max="250000" value="50000">
-                      <input type="range" id="maxSlider" class="price-slider" min="50000" max="250000" value="250000">
+                    <div class="price-slider-track"></div>
+                    <input type="range" id="minPriceSlider" class="price-slider" min="50000" max="250000" value="50000">
+                    <input type="range" id="maxPriceSlider" class="price-slider" min="50000" max="250000" value="250000">
                   </div>
                   <div class="price-inputs">
+                    <label for="minPriceInput">
                       <input type="number" id="minPriceInput" value="50000">
+                      <div class="price-inputs__descrs min">
+                        <p>
+                          от
+                        </p>
+                        <p>
+                          ₽
+                        </p>
+                      </div>
+                    </label>
+                    <label for="maxPriceInput">
                       <input type="number" id="maxPriceInput" value="250000">
+                      <div class="price-inputs__descrs max">
+                        <p>
+                          до
+                        </p>
+                        <p>
+                          ₽
+                        </p>
+                      </div>
+                    </label>
                   </div>
-
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Серия
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="series15">
+                      <input type="checkbox" id="series15">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 15 </p>
+                    </label>
+                    <label for="series14">
+                      <input type="checkbox" id="series14">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 14 </p>
+                    </label>
+                    <label for="series13">
+                      <input type="checkbox" id="series13">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 13 </p>
+                    </label>
+                    <label for="series12">
+                      <input type="checkbox" id="series12">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 12 </p>
+                    </label>
+                    <label for="series11">
+                      <input type="checkbox" id="series11">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 11 </p>
+                    </label>
+                    <label for="series10">
+                      <input type="checkbox" id="series10">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone X </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Модель
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="model15ProMax">
+                      <input type="checkbox" id="model15ProMax">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 15 Pro Max </p>
+                    </label>
+                    <label for="model15Pro">
+                      <input type="checkbox" id="model15Pro">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 15 Pro </p>
+                    </label>
+                    <label for="model15Plus">
+                      <input type="checkbox" id="model15Plus">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 15 Plus </p>
+                    </label>
+                    <label for="model15">
+                      <input type="checkbox" id="model15">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 15 </p>
+                    </label>
+                    <label for="model14ProMax">
+                      <input type="checkbox" id="model14ProMax">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 14 Pro Max </p>
+                    </label>
+                    <label for="model14Pro">
+                      <input type="checkbox" id="model45Pro">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 14 Pro </p>
+                    </label>
+                    <label for="model45Plus">
+                      <input type="checkbox" id="model14Plus">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 14 Plus </p>
+                    </label>
+                    <label for="model14">
+                      <input type="checkbox" id="model14">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> iPhone 14 </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Диагональ
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="diagonal4.7">
+                      <input type="checkbox" id="diagonal4.7">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 4,7″ </p>
+                    </label>
+                    <label for="diagonal4">
+                      <input type="checkbox" id="diagonal4">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 4″ </p>
+                    </label>
+                    <label for="diagonal5.4">
+                      <input type="checkbox" id="diagonal5.4">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 5,4″ </p>
+                    </label>
+                    <label for="diagonal5.5">
+                      <input type="checkbox" id="diagonal5.5">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 5,5″ </p>
+                    </label>
+                    <label for="diagonal5.8">
+                      <input type="checkbox" id="diagonal5.8">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 5,8″ </p>
+                    </label>
+                    <label for="diagonal6">
+                      <input type="checkbox" id="diagonal6">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 6″ </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Год релиза
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="release2023">
+                      <input type="checkbox" id="release2023">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2023 </p>
+                    </label>
+                    <label for="release2022">
+                      <input type="checkbox" id="release2022">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2022 </p>
+                    </label>
+                    <label for="release2021">
+                      <input type="checkbox" id="release2021">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2021 </p>
+                    </label>
+                    <label for="release2020">
+                      <input type="checkbox" id="release2020">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2020 </p>
+                    </label>
+                    <label for="release2019">
+                      <input type="checkbox" id="release2019">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2019 </p>
+                    </label>
+                    <label for="release2018">
+                      <input type="checkbox" id="release2018">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 2018 </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Объем памяти
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="memoryCapacity1">
+                      <input type="checkbox" id="memoryCapacity1">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 1 TB </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Модель процессора
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="processorModelA11">
+                      <input type="checkbox" id="processorModelA11">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> A11 </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Количество основных камер
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="valueCameras1">
+                      <input type="checkbox" id="valueCameras1">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 1 </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Тип SIM-карты
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="SIM-nano">
+                      <input type="checkbox" id="SIM-nano">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> SIM nano </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Поддержка NFC
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="NFS-yes">
+                      <input type="checkbox" id="NFS-yes">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> Есть NFS </p>
+                    </label>
+                    <label for="NFS-no">
+                      <input type="checkbox" id="NFS-no">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> Нет NFS </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Гарантия
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="warranty1">
+                      <input type="checkbox" id="warranty2">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> 1 год </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+                <div class="catalog-content__products-bottom__filter-block">
+                  <div class="catalog-content__products-bottom__filter-block__top">
+                    <h4>
+                      Цвет
+                    </h4>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 8L11 14L5 8" stroke="#717171" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <div class="catalog-content__products-bottom__filter-block__ui-checkbox-group">
+                    <label for="colorBlue">
+                      <input type="checkbox" id="colorBlue">
+                      <span class="ui-checkbox__custom"></span>
+                      <p> Синий </p>
+                    </label>
+                  </div>
+                  <button>
+                    Показать ещё
+                  </button>
+                </div>
+              </div>
+              <div class="catalog-content__products-bottom__cards">
+                <div class="catalog-content__products-bottom__cards-top">
+                  <div class="catalog-content__products-bottom__cards-top__filter">
+                    <p>
+                      Сбросить все фильтры
+                    </p>
+                    <button>
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.75 1.25L1.25 8.75M1.25 1.25L8.75 8.75" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="catalog-content__products-bottom__cards-content">
+                  <ul class="catalog-content__products-bottom__cards-content__list active" data-target="catalog-products-list1">
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15Pro-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone11-dark.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 11 128GB, черный
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15ProMax-whiteTitan.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro Max nano SIM+eSIM 256GB, белый титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>189 990 ₽</span>
+                            155 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14ProMax-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15ProMax-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14ProMax-dark.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15ProMax-darkBlue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14ProMax-green.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 11 128GB, черный
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15Pro-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone11-dark.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 11 128GB, черный
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                  <ul class="catalog-content__products-bottom__cards-content__list" data-target="catalog-products-list2">
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15Pro-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone11-dark.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 11 128GB, черный
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15ProMax-whiteTitan.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro Max nano SIM+eSIM 256GB, белый титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>189 990 ₽</span>
+                            155 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14ProMax-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                  <ul class="catalog-content__products-bottom__cards-content__list" data-target="catalog-products-list3">
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-white.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone15Pro-silver.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 15 Pro nano SIM+nano SIM 256GB, черный титан
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>169 990 ₽</span>
+                            139 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone14-blue.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 14 nano SIM+eSIM 128GB, сияющая звезда
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>89 990 ₽</span>
+                            79 990 ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                    <li class="catalog-content__products-bottom__cards-content__list-item">
+                      <a href="#" class="catalog-content__products-bottom__cards-content__list-item__link"></a>
+                      <span class="catalog-content__products-bottom__cards-content__list-item__discount">
+                        -2%
+                      </span>
+                      <div class="catalog-content__products-bottom__cards-content__list-item__simple">
+                        <button>
+                          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5 17.7188C10.5 17.7188 2.29688 13.125 2.29688 7.54688C2.29704 6.56098 2.63866 5.60556 3.26365 4.84306C3.88864 4.08057 4.75842 3.55807 5.72512 3.36439C6.69181 3.17071 7.69575 3.31781 8.56624 3.78069C9.43673 4.24356 10.12 4.99364 10.5 5.90339L10.5 5.90339C10.88 4.99364 11.5633 4.24357 12.4338 3.78069C13.3042 3.31782 14.3082 3.17071 15.2749 3.36439C16.2416 3.55806 17.1114 4.08057 17.7363 4.84306C18.3613 5.60556 18.703 6.56098 18.7031 7.54688C18.7031 13.125 10.5 17.7188 10.5 17.7188Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                        <button>
+                          <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11 14.6666V6.33331M6 14.6666V1.33331M1 14.6666V9.66665" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </button>
+                      </div>
+                      <img src="./img/catalogiphone/catalogPhone-cards/catalogPhone-cards-iphone11-dark.svg" alt="img">
+                      <article class="catalog-content__products-bottom__cards-content__list-item__article">
+                        <h4>
+                          Apple iPhone 11 128GB, черный
+                        </h4>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-price">
+                          <p>
+                            <span>66 990 ₽</span>
+                            59 490  ₽
+                          </p>
+                          <button>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.0006 7.875V5.25C14.0006 3.317 12.4336 1.75 10.5006 1.75C8.56757 1.75 7.00057 3.317 7.00057 5.25V7.875M3.14357 9.05797L2.61857 14.658C2.4693 16.2502 2.39466 17.0463 2.65886 17.6612C2.89095 18.2014 3.29767 18.6481 3.81383 18.9296C4.4014 19.25 5.20101 19.25 6.80023 19.25H14.2009C15.8001 19.25 16.5997 19.25 17.1873 18.9296C17.7035 18.6481 18.1102 18.2014 18.3423 17.6612C18.6065 17.0463 18.5318 16.2502 18.3826 14.658L17.8576 9.05797C17.7315 7.71343 17.6685 7.04116 17.3661 6.53289C17.0998 6.08526 16.7064 5.72697 16.2358 5.50361C15.7016 5.25 15.0263 5.25 13.6759 5.25L7.32523 5.25C5.9748 5.25 5.29958 5.25 4.76531 5.50361C4.29477 5.72697 3.90132 6.08526 3.63502 6.53289C3.33265 7.04116 3.26962 7.71343 3.14357 9.05797Z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="catalog-content__products-bottom__cards-content__list-item__article-bottom">
+                          <p>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M11.6668 3.5L5.25016 9.91667L2.3335 7" stroke="#5D5D5D" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            в наличии
+                          </p>
+                          <a href="#"> Купить в 1 клик </a>
+                        </div>
+                      </article>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn-global catalog-content__products-bottom__cards-btn">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7627 7.79028H17.5127V4.04028" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M5.13867 5.13864C5.77707 4.50024 6.53497 3.99383 7.36908 3.64833C8.2032 3.30283 9.09719 3.125 10 3.125C10.9029 3.125 11.7969 3.30283 12.631 3.64833C13.4651 3.99383 14.223 4.50024 14.8614 5.13864L17.513 7.79029" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M6.2373 12.2097H2.4873V15.9597" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.8617 14.8614C14.2233 15.4998 13.4654 16.0062 12.6313 16.3517C11.7971 16.6972 10.9032 16.875 10.0003 16.875C9.09748 16.875 8.20348 16.6972 7.36936 16.3517C6.53525 16.0062 5.77736 15.4998 5.13895 14.8614L2.4873 12.2097" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Показать ещё
+                </button>
+                <div class="catalog-content__products-bottom__cards-pages">
+                  <button class="catalog-content__products-bottom__cards-pages__btn prev">
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.75 1.375L7.375 7L1.75 12.625" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number active" id="catalog-products-list1">
+                    1
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list2">
+                    2
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list3">
+                    3
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list4">
+                    4
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list5">
+                    5
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list6">
+                    6
+                  </button>
+                  <button class="catalog-content__products-bottom__cards-pages__number" id="catalog-products-list7">
+                    7
+                  </button>
+                  <span class="catalog-content__products-bottom__cards-pages__ellipsis">...</span>
+                  <button class="catalog-content__products-bottom__cards-pages__btn next">
+                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.75 1.375L7.375 7L1.75 12.625" stroke="#D9D9D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
@@ -870,10 +2592,61 @@
       </div>
     </section>
 
+    <section class="catalog-about">
+      <div class="container">
+        <div class="catalog-about__content">
+          <div class="catalog-about__content-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 11.5001L11 13.5001L15.5 9.00011M20 12.0001C20 16.9086 14.646 20.4785 12.698 21.615C12.4766 21.7442 12.3659 21.8087 12.2097 21.8422C12.0884 21.8682 11.9116 21.8682 11.7903 21.8422C11.6341 21.8087 11.5234 21.7442 11.302 21.615C9.35396 20.4785 4 16.9086 4 12.0001V7.21772C4 6.4182 4 6.01845 4.13076 5.67482C4.24627 5.37126 4.43398 5.10039 4.67766 4.88564C4.9535 4.64255 5.3278 4.50219 6.0764 4.22146L11.4382 2.21079C11.6461 2.13283 11.75 2.09385 11.857 2.07839C11.9518 2.06469 12.0482 2.06469 12.143 2.07839C12.25 2.09385 12.3539 2.13283 12.5618 2.21079L17.9236 4.22146C18.6722 4.50219 19.0465 4.64255 19.3223 4.88564C19.566 5.10039 19.7537 5.37126 19.8692 5.67482C20 6.01845 20 6.4182 20 7.21772V12.0001Z" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Гарантия
+            </h3>
+            <p>
+              Вся наша техника имеет мировую гарантию. Все модели являются новыми, и Вы всегда можете проверить это перед покупкой через официальный сайт Apple
+            </p>
+          </div>
+          <div class="catalog-about__content-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 9H9.01M15 15H15.01M16 8L8 16M7.33377 3.8187C8.1376 3.75455 8.90071 3.43846 9.51447 2.91542C10.9467 1.69486 13.0533 1.69486 14.4855 2.91542C15.0993 3.43846 15.8624 3.75455 16.6662 3.8187C18.5421 3.96839 20.0316 5.45794 20.1813 7.33377C20.2455 8.1376 20.5615 8.90071 21.0846 9.51447C22.3051 10.9467 22.3051 13.0533 21.0846 14.4855C20.5615 15.0993 20.2455 15.8624 20.1813 16.6662C20.0316 18.5421 18.5421 20.0316 16.6662 20.1813C15.8624 20.2455 15.0993 20.5615 14.4855 21.0846C13.0533 22.3051 10.9467 22.3051 9.51447 21.0846C8.90071 20.5615 8.1376 20.2455 7.33377 20.1813C5.45794 20.0316 3.96839 18.5421 3.8187 16.6662C3.75455 15.8624 3.43846 15.0993 2.91542 14.4855C1.69486 13.0533 1.69486 10.9467 2.91542 9.51447C3.43846 8.90071 3.75455 8.1376 3.8187 7.33377C3.96839 5.45794 5.45794 3.96839 7.33377 3.8187ZM9.5 9C9.5 9.27614 9.27614 9.5 9 9.5C8.72386 9.5 8.5 9.27614 8.5 9C8.5 8.72386 8.72386 8.5 9 8.5C9.27614 8.5 9.5 8.72386 9.5 9ZM15.5 15C15.5 15.2761 15.2761 15.5 15 15.5C14.7239 15.5 14.5 15.2761 14.5 15C14.5 14.7239 14.7239 14.5 15 14.5C15.2761 14.5 15.5 14.7239 15.5 15Z" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Минимальная цена
+            </h3>
+            <p>
+              На множество моделей iPhone, iPad, iMac и Macbook у нас представлена минимальная цена в России, при этом мы всегда строго выполняем свои гарантийные обязательства!
+            </p>
+          </div>
+          <div class="catalog-about__content-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 14.2864C3.14864 15.1031 2 16.2412 2 17.5C2 19.9853 6.47715 22 12 22C17.5228 22 22 19.9853 22 17.5C22 16.2412 20.8514 15.1031 19 14.2864M18 8C18 12.0637 13.5 14 12 17C10.5 14 6 12.0637 6 8C6 4.68629 8.68629 2 12 2C15.3137 2 18 4.68629 18 8ZM13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7C12.5523 7 13 7.44772 13 8Z" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Работаем по всей РФ
+            </h3>
+            <p>
+              Мы работаем не только в Москве, но и по всей России (более подробно ознакомиться с условиями Вы можете в специальных разделах)!
+            </p>
+          </div>
+          <div class="catalog-about__content-card">
+            <h3>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 2V3.4C15 3.96005 15 4.24008 14.891 4.45399C14.7951 4.64215 14.6422 4.79513 14.454 4.89101C14.2401 5 13.9601 5 13.4 5H10.6C10.0399 5 9.75992 5 9.54601 4.89101C9.35785 4.79513 9.20487 4.64215 9.10899 4.45399C9 4.24008 9 3.96005 9 3.4V2M7.2 22H16.8C17.9201 22 18.4802 22 18.908 21.782C19.2843 21.5903 19.5903 21.2843 19.782 20.908C20 20.4802 20 19.9201 20 18.8V5.2C20 4.07989 20 3.51984 19.782 3.09202C19.5903 2.71569 19.2843 2.40973 18.908 2.21799C18.4802 2 17.9201 2 16.8 2H7.2C6.0799 2 5.51984 2 5.09202 2.21799C4.71569 2.40973 4.40973 2.71569 4.21799 3.09202C4 3.51984 4 4.0799 4 5.2V18.8C4 19.9201 4 20.4802 4.21799 20.908C4.40973 21.2843 4.71569 21.5903 5.09202 21.782C5.51984 22 6.07989 22 7.2 22Z" stroke="#232323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Актуальные модели
+            </h3>
+            <p>
+              У нас представлены все актуальные модели гаджетов из Купертино, а при покупке Вы всегда можете выбрать понравившийся аксессуар
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer color">
     <div class="container">
       <div class="footer-link">
         <h3>
@@ -884,9 +2657,9 @@
         </p>
         <span class="footer-link__arrow">
           <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="66" height="66" rx="18" fill="#F5F5F7"/>
-            <path d="M25.666 40.3337L40.3327 25.667" stroke="#5D5D5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M28.416 25.667H40.3327V37.5837" stroke="#5D5D5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect width="66" height="66" rx="18" fill="white"/>
+            <path d="M25.666 40.3334L40.3327 25.6667" stroke="#5D5D5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28.416 25.6667H40.3327V37.5834" stroke="#5D5D5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
         <a href="#" class="footer-link__link"></a>
@@ -894,7 +2667,7 @@
       <div class="footer-content">
         <div class="footer-content__top">
           <a href="#" class="footer-content__logo">
-            <img src="./img/header/logo.png" alt="img">
+            <img src="./img/header/logo.svg" alt="img">
           </a>
           <div class="footer-content__links">
             <div class="footer-content__columns">
