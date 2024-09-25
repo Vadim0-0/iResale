@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Расссрочка</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <header class="header">
@@ -73,7 +73,7 @@
       <div class="container">
         <div class="header-bottom__content off">
           <a href="#" class="header-bottom__logo">
-            <img src="./img/header/logo.png" alt="logo" class="header-logo">
+            <img src="./img/header/logo.svg" alt="logo" class="header-logo">
           </a>
           <!--nav class="header-bottom__nav">
             <button class="btn-global header-bottom__btn">
@@ -218,7 +218,7 @@
             <p class="installmentPlan-hero__descr">
               Покупая в рассрочку, вы ничего не переплачиваете — общая сумма выплат будет равна первоначальной стоимости, но при этом вы уплатите её частями на протяжении всего срока рассрочки.
             </p>
-            <img src="./img/installmentPlan/main-img.png" alt="img" class="installmentPlan-hero__img">
+            <img src="./img/installmentPlan/main-img.svg" alt="img" class="installmentPlan-hero__img">
             <div class="installmentPlan-hero__content-devices">
               <div class="installmentPlan-hero__content-devices__selector">
                 <div class="installmentPlan-hero__content-devices__selector-device active" data-target="iphone">
@@ -535,7 +535,7 @@
       <div class="footer-content">
         <div class="footer-content__top off">
           <a href="#" class="footer-content__logo">
-            <img src="./img/header/logo.png" alt="img">
+            <img src="./img/header/logo.svg" alt="img">
           </a>
           <div class="footer-content__links">
             <!--div class="footer-content__columns">
@@ -751,23 +751,23 @@
           В ближайшее время с Вами свяжется менеджер для уточнения подробностей
         </p>
 
-        <form action="" class="installmentPlan__pop-app__content-form">
+        <form action="#" class="installmentPlan__pop-app__content-form" id="installmentForm">
           <label for="installmentPlan__pop-app__name">
-            <input type="text" name="installmentPlan__pop-app__name" id="installmentPlan__pop-app__name" placeholder="Ваше имя">
+            <input type="text" name="installmentPlan__pop-app__name" id="installmentPlan__pop-app__name" placeholder="Ваше имя" required>
           </label>
           <label for="installmentPlan__pop-app__tel">
-            <input type="tel" name="installmentPlan__pop-app__tel" id="installmentPlan__pop-app__tel" placeholder="+7 ___ ___-__-__">
+            <input type="tel" name="installmentPlan__pop-app__tel" id="installmentPlan__pop-app__tel" placeholder="+7 ___ ___-__-__" required>
           </label>
 
           <label for="checkbox" class="installmentPlan__pop-app__content-form__checkbox">
-            <input id="checkbox" type="checkbox">
+            <input id="checkbox" type="checkbox" required>
             <span class="installmentPlan__pop-app__content-form__checkbox-custom"></span>
             <p class="installmentPlan__pop-app__content-form__checkbox-descr">
               Я согласен(-на) на <a href="#">обработку персональных данных</a> в соответствии с <a href="#">политикой конфиденциальности</a>
             </p>
           </label>
 
-          <button class="btn-global installmentPlan__pop-app__content-form__btn">
+          <button type="submit" class="btn-global installmentPlan__pop-app__content-form__btn">
             Отправить
           </button>
         </form>
